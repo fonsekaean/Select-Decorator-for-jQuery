@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Select Decorator for jQuery</title>
+<meta content="select boxes, styling select boxes, styling dropdowns, jquery plugins " name="keywords" />
+<meta name="description" content="jquery plugin to style the HTML select boxes" />
+
+<link rel="stylesheet" href="style.css"  />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.selectdecorator.js"></script>
+<script type="text/javascript" src="runDecorator.js"></script>
+
+</head>
+
+<body>
+
+
+    <div id="PluginHolder">
+    	<h1>Select Decorator for jQuery</h1>
+        <p>
+        	You might have experienced that you cant style a HTML Select option as you needed. This plugin will help you to make your drop down to look as you like. It uses CSS styling, Images can do a lot, so setting up a DIV and a background and hiding your select box is the logic here. This is the second release of the plugin and it works perfectly on all the browsers including IE.
+        </p>
+		
+        <h2>Demo</h2> 
+        <div>    
+            <select id="MySelect">   
+                <option value="1">Option one</option>
+                <option value="2">Option two</option>
+                <option value="3">Option three</option>
+            </select>
+        </div>
+        <div style="padding:10px 0px; font-size:22px; font-weight:600; margin-left:300px; margin-top:-40px; position:absolute;" id="MySelectVal">
+        	do some change on the opposit select box.
+        </div>
+        <div style="height:10px;"></div>
+        <div>    
+            <select id="MySelect2">   
+                <option value="1">Option one</option>
+                <option value="2">Option two</option>
+                <option value="3">Option three</option>
+            </select>
+        </div>
+        <div style="padding:10px 0px;" id="MySelect2Val">
+        	
+        </div>
+        
+        <h2>How to use</h2>
+        <p>
+        	This is the little snippet of code which is used to make the bulk uploader on this webpage. This might be useful for you.
+        </p>
+        <p>
+        	<b>The below is my HTML</b>
+        </p>
+        <div class="HowToUse">
+        	&lt;div&gt;<br />    
+        		&nbsp;&nbsp;&nbsp;&lt;select id="MySelect"&gt;<br />   
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="1"&gt;Option one&lt;/option&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="2"&gt;Option two&lt;/option&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="3"&gt;Option three&lt;/option&gt;<br />
+                &nbsp;&nbsp;&nbsp;&lt;/select&gt;<br />
+            &lt;/div&gt;<br />
+        </div>
+        <p>
+        	<b>This is my JavaScript</b>
+        </p>
+        <div class="HowToUse">
+        	&lt;script type="text/javascript"&gt;<br />
+				&nbsp;&nbsp;&nbsp;jQuery('document').ready(function(){<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jQuery("#MySelect").selectdecorator(<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DIVClass : "selectholder",	<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onChange : function(){	<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jQuery('#MySelectVal').html('You selected ' + jQuery("#MySelect").val());	<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}	<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br />					
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br />
+                &nbsp;&nbsp;&nbsp;});<br />
+			&lt;/script&gt;
+        </div>
+        <p>
+        	<b>This is my CSS</b>
+        </p>
+        <div class="HowToUse">
+        	.selectholder{<br />
+                &nbsp;&nbsp;&nbsp;width:242px;<br />
+                &nbsp;&nbsp;&nbsp;overflow:0px;<br />
+                &nbsp;&nbsp;&nbsp;padding:4px;<br />
+                &nbsp;&nbsp;&nbsp;height:22px;<br />
+                &nbsp;&nbsp;&nbsp;display:block;<br />
+                &nbsp;&nbsp;&nbsp;background:url(images/select.gif);<br />
+                &nbsp;&nbsp;&nbsp;color:#FFF;<br />
+                &nbsp;&nbsp;&nbsp;font-family:Arial, Helvetica, sans-serif;<br />
+                &nbsp;&nbsp;&nbsp;font-weight:bold;<br />
+                &nbsp;&nbsp;&nbsp;font-size:13px;<br />
+                &nbsp;&nbsp;&nbsp;cursor:pointer;<br />
+            }<br /><br />
+                &nbsp;&nbsp;&nbsp;.selectholder span{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:242px;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height:22px;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display:block;<br />
+                &nbsp;&nbsp;&nbsp;}<br /><br />
+                &nbsp;&nbsp;&nbsp;.selectholder ul{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:#FFF;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border:1px solid #333;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;border-top:none;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:#000;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display:block;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width:242px;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list-style:none;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list-style-type:none;<br />
+                &nbsp;&nbsp;&nbsp;}<br /><br />
+                &nbsp;&nbsp;&nbsp;.selectholder ul li{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding:2px 3px;<br />
+                &nbsp;&nbsp;&nbsp;}<br /><br />
+                &nbsp;&nbsp;&nbsp;.selectholder ul li:hover{<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background:#0CF;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:#FFF;<br />
+                &nbsp;&nbsp;&nbsp;}<br />
+                
+        </div>
+        <p>
+        	If you have linked the jQuery library and the jquery.selectdecorator.js to your HTML properly and you have added the two snippets of code properly then you will end up with styling your select fields.
+        </p>
+        <p>
+        	<a href="bulkuploader.rar">Download here</a>
+        </p>
+        
+        
+        
+    </div>
+
+
+
+</body>
+</html>

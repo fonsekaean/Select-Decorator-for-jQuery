@@ -1,0 +1,118 @@
+*{
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+#PluginHolder{
+	margin:50px;
+	background-color:#F2F9FF;
+	border:1px solid #DFEEFF;
+	padding:50px;
+}
+h1, h2{
+	font-size:25px;
+	font-weight:500;
+	margin:10px 0px;
+}
+p{
+	font-size:12px;
+	margin:5px 0px;
+}
+
+.selectholder{
+	width:242px;
+	overflow:0px;
+	padding:4px;
+	height:22px;
+	display:block;
+	background:url(images/select.gif);
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:13px;
+	cursor:pointer;
+}
+	.selectholder span{
+		width:242px;
+		height:22px;
+		display:block;
+	}
+
+	.selectholder ul{
+		background:#FFF;
+		border:1px solid #333;
+		border-top:none;
+		color:#000;
+		display:block;
+		width:242px;
+		list-style:none;
+		list-style-type:none;
+	}
+
+	.selectholder ul li{
+		padding:2px 3px;
+	}
+	.selectholder ul li:hover{
+		background:#0CF;
+		color:#FFF;
+	}
+	.selectholder select{
+		min-width:242px;
+	}
+	
+	
+.selectholder2{
+	width:192px;
+	overflow:0px;
+	padding:4px;
+	height:19px;
+	display:block;
+	background:url(images/select-2.gif) top;
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:12px;
+	cursor:pointer;
+}
+.selectholder2:hover, .selectholder2:focus{
+	background:url(images/select-2.gif) bottom;
+}
+	.selectholder2 span{
+		width:200px;
+		height:19px;
+		display:block;
+		line-height:19px;
+	}
+
+	.selectholder2 ul{
+		background:#dfa8ef;
+		border:1px solid #a73ac8;
+		border-top:none;
+		color:#000;
+		display:block;
+		width:198px;
+		margin-left:-4px;
+		list-style:none;
+		list-style-type:none;
+	}
+
+	.selectholder2 ul li{
+		padding:2px 3px;
+	}
+	.selectholder2 ul li:hover{
+		background:#e49afa;
+		color:#FFF;
+	}
+	.selectholder2 select{
+		min-width:242px;
+	}
+	
+	
+.HowToUse{
+	padding:10px;
+	background:#fefbd6;
+	font-family:"Courier New", Courier, monospace;
+	font-size:12px;
+	border:1px #91a4e3 dashed;
+}
